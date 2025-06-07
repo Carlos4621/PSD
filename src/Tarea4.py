@@ -13,8 +13,8 @@ class Tarea_4:
         analog_output = digital_input * step_size
 
         plt.figure(figsize=(8, 5))
-        plt.step(digital_input, analog_output, where='post')
-        plt.title('Salida')
+        plt.step(digital_input, analog_output)
+        plt.title(f"Resolución = {resolution}")
         plt.xlabel('Entrada digital')
         plt.ylabel('Salida analógica (V)')
         plt.grid(True)
