@@ -1,5 +1,6 @@
 import sys
 from src.Tarea1 import Tarea_1
+from src.Tarea2 import Tarea_2
 from src.Tarea3 import Tarea_3
 
 def main():
@@ -11,6 +12,12 @@ def main():
     match sys.argv[1]:
         case "tarea1":
             Tarea_1.iniciar()
+
+        case "tarea2":
+            if len(sys.argv) != 3:
+                print("Usage: python main.py tarea2 amplitud")
+                exit()
+            Tarea_2.iniciar(float(sys.argv[2]))
             
         case "tarea3":
             if len(sys.argv) != 5:
