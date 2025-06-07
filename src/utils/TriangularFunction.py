@@ -1,7 +1,7 @@
 import numpy as np
-from src.utils.MathFunction import MathFunction
+from src.utils.GraphFunction import GraphFunction
 
-class TriangularFunction(MathFunction):
+class TriangularFunction(GraphFunction):
     def calculate(self, time: float) -> float:
         period = 1.0 / self.frecuency
         time_module = time % period

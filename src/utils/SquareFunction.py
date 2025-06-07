@@ -1,6 +1,6 @@
-from src.utils.MathFunction import MathFunction
+from src.utils.GraphFunction import GraphFunction
 
-class SquareFunction(MathFunction):
+class SquareFunction(GraphFunction):
     def calculate(self, time: float):
         period = 1.0 / self.frecuency
         time_module = time % period

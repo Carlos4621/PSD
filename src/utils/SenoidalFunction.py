@@ -1,6 +1,6 @@
 import numpy as np
-from src.utils.MathFunction import MathFunction
+from src.utils.GraphFunction import GraphFunction
 
-class SinoidalFunction(MathFunction):
+class SinoidalFunction(GraphFunction):
     def calculate(self, time: float):
-        return np.sin(2 * np.pi * self.frecuency * time)
+        return self.amplitud * np.sin((2 * np.pi * self.frecuency * time) + self.fase)

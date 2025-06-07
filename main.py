@@ -1,15 +1,22 @@
 import sys
 from src.Tarea1 import Tarea_1
+from src.Tarea3 import Tarea_3
 
 def main():
 
-    if len(sys.argv) != 2:
+    if len(sys.argv) < 2:
         print("Usage: python main.py arg")
         exit()
 
     match sys.argv[1]:
         case "tarea1":
             Tarea_1.iniciar()
+            
+        case "tarea3":
+            if len(sys.argv) != 5:
+                print("Usage: python main.py tarea3 amplitud frecuencia fase")
+                exit() 
+            Tarea_3.iniciar(float(sys.argv[2]), float(sys.argv[3]), float(sys.argv[4]))
 
         case _:
             print("Invalid argument")
